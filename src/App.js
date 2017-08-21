@@ -1,14 +1,126 @@
 import React, { Component } from 'react';
 
-
 class App extends Component {
-  render() {
-    return (
-      <div className="App">
-          <h1>The Beginning</h1>
-      </div>
-    );
-  }
+    constructor(props) {
+        super(props);
+        this.state = {
+            width: 0,
+            rachelActive: false,
+            tonyActive: false,
+        };
+        this.updateDimensions = this.updateDimensions.bind(this);
+        this.reset = this.reset.bind(this);
+        this.rachel = this.rachel.bind(this);
+        this.tony = this.tony.bind(this);
+    };
+    componentWillMount() {
+        this.updateDimensions();
+    }
+    componentDidMount() {
+        window.addEventListener("resize", this.updateDimensions);
+    }
+    componentWillUnmount() {
+        window.removeEventListener("resize", this.updateDimensions);
+    }
+    updateDimensions() {
+        this.setState({width: window.innerWidth});
+    }
+    reset() {
+        if(this.state.rachelActive === true) {
+            this.toggleRachel();
+        }
+        if(this.state.tonyActive === true) {
+            this.toggleTony();
+        }
+    }
+    toggleRachel() {
+      this.setState({
+         rachelActive: !this.state.rachelActive
+      });
+        let rachelSkill = document.getElementsByClassName('rachel');
+        for (let i = 0; i < rachelSkill.length; i++) {
+            rachelSkill[i].classList.toggle('red');
+        }
+    }
+    toggleTony() {
+      this.setState({
+         tonyActive: !this.state.tonyActive
+      });
+        let tonySkill = document.getElementsByClassName('tony');
+        for (let i = 0; i < tonySkill.length; i++) {
+            tonySkill[i].classList.toggle('red');
+        }
+    }
+    rachel() {
+        if (this.state.tonyActive === true) {
+            this.toggleTony()
+        }
+        this.toggleRachel();
+    }
+    tony() {
+        if (this.state.rachelActive === true) {
+            this.toggleRachel();
+        }
+        this.toggleTony();
+    }
+    render() {
+        return (
+            <div className="App">
+              <div id="header">
+                <div id="titleNamesContainer">
+                  <div id="title" onClick={this.reset}>{this.state.width < 700 ? 'G' : 'Geometrics'}</div>
+                  <div id="names"><span id="rachelName" className="rachel" onClick={this.rachel}>Rachel</span><span id="tonyName" className="tony" onClick={this.tony}>Tony</span></div>
+                </div>
+                <div id="links">
+                    {this.state.rachelActive === true ?
+                  <div className="rachelLinks">
+                    <a href="https://github.com/millerrach">Github</a>
+                    <a href="https://codepen.io/rachelmiller_io/">Codepen</a>
+                    <a href="https://www.instagram.com/vagarmundo">Instagram</a>
+                    <a href="mailto:rachel@geometrics.io">Email</a>
+                  </div>
+                        : null}
+                    {this.state.tonyActive === true ?
+                  <div className="tonyLinks">
+                    <a className="tonyLinks" href="https://github.com/antschmidt">Github</a>
+                    <a className="tonyLinks" href="https://twitter.com/tonyschmidt">Twitter</a>
+                    <a className="tonyLinks" href="https://www.instagram.com/antschmidt">Instagram</a>
+                    <a className="tonyLinks" href="mailto:tony@geometrics.io">Email</a>
+                  </div>
+                        : null}
+                </div>
+                <img src={require(`./images/PeacefulFloat.svg`)} alt="floatingLady" />
+              </div>
+              <div id="skillsContainer">
+                <div id="skills">
+                  <div className="skillsLineOne between">
+                    <span className="rachel tony">JavaScript</span>
+                    <span className="tony">Go</span>
+                    <span className="rachel">SVGs</span>
+                  </div>
+                  <div className="skillsLineTwo around">
+                    <span className="tony">React</span>
+                    <span className="rachel tony">Redux</span>
+                  </div>
+                  <div className="skillsLineThree center">
+                    <span className="rachel tony">HTML5</span>
+                  </div>
+                  <div className="skillsLineFour between">
+                    <span className="rachel">CSS3</span>
+                    <span className="rachel">Sass</span>
+                  </div>
+                  <div className="skillsLineFive center">
+                    <span className="tony">SQL</span>
+                  </div>
+                  <div className="skillsLineSix around">
+                    <span className="rachel">Sketch</span>
+                    <span className="rachel">Material UI</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+        );
+    }
 }
 
 export default App;
