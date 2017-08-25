@@ -16,8 +16,10 @@ $darkGray: #737373;
 body {
   font-family: 'Montserrat', sans-serif;
   color: $lightGray;
-  height: 100vh;
-  #header {
+  #top {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
     #titleNamesContainer {
       padding: 1em;
       display: flex;
@@ -30,7 +32,7 @@ body {
       }
       #names {
         display: inline-block;
-        font-size: 1.25em;
+        font-size: 1.5em;
         color: $darkGray;
         opacity: .75;
         #rachelName {
@@ -39,9 +41,8 @@ body {
       }
     }
     #links {
-      padding: 5em 0;
-      height: 18px;
       .rachelLinks, .tonyLinks {
+        width: 100%;
         display: flex;
         justify-content: space-around;
         a {
@@ -53,19 +54,17 @@ body {
         }
       }
     }
-  }
-  #svg {
-    img {
-      width: 100%;
+    #svg {
+      img {
+        margin-bottom: -5px;
+        width: 100%;
+      }
     }
   }
-  #skillsContainer {
-    margin-top: -5px;
+  #bottom {
     background-color: $blue;
     width: 100%;
     #skills {
-      height: 70vh;
-      padding: 0 4em;
       display: flex;
       flex-direction: column;
       justify-content: space-around;

@@ -66,7 +66,7 @@ class App extends Component {
     render() {
         return (
             <div className="App">
-                <div id="header">
+                <div id="top" style={this.state.width < 700 ? {height: '50vh'} : {height: '60vh'}}>
                     <div id="titleNamesContainer">
                         <div id="title" onClick={this.reset}>{this.state.width < 700 ? 'G' : 'Geometrics'}</div>
                         <div id="names"><span id="rachelName" className="rachel" onClick={this.rachel}>Rachel</span><span id="tonyName" className="tony" onClick={this.tony}>Tony</span></div>
@@ -89,23 +89,23 @@ class App extends Component {
                             </div>
                             : null}
                     </div>
+                    <div id="svg">
+                        <img src={require(`./images/PeacefulFloat.svg`)} alt="floatingLady" />
+                    </div>
                 </div>
-                <div id="svg">
-                    <img src={require(`./images/PeacefulFloat.svg`)} alt="floatingLady" />
-                </div>
-                <div id="skillsContainer">
-                    <div id="skills">
+                <div id="bottom">
+                    <div id="skills" style={this.state.width < 700 ? {height: '50vh', padding: '0 1em'} : {height: '40vh', padding: '0 4em'}}>
                         <div className="skillsLineOne between">
-                            <span className="rachel tony">JavaScript</span>
-                            <span className="tony">Go</span>
                             <span className="rachel">SVGs</span>
+                            <span className="tony">Go</span>
+                            <span className="rachel">Material UI</span>
                         </div>
                         <div className="skillsLineTwo around">
-                            <span className="tony">React</span>
+                            <span className="rachel tony">React</span>
                             <span className="rachel tony">Redux</span>
                         </div>
                         <div className="skillsLineThree center">
-                            <span className="rachel tony">HTML5</span>
+                            <span className="rachel tony">JavaScript</span>
                         </div>
                         <div className="skillsLineFour between">
                             <span className="rachel">CSS3</span>
@@ -116,7 +116,7 @@ class App extends Component {
                         </div>
                         <div className="skillsLineSix around">
                             <span className="rachel">Sketch</span>
-                            <span className="rachel">Material UI</span>
+                            <span className="rachel">HTML5</span>
                         </div>
                     </div>
                 </div>

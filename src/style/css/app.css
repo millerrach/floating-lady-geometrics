@@ -6,54 +6,53 @@
 
 body {
   font-family: 'Montserrat', sans-serif;
-  color: #D8D8D8;
-  height: 100vh; }
-  body #header #titleNamesContainer {
-    padding: 1em;
+  color: #D8D8D8; }
+  body #top {
     display: flex;
-    justify-content: space-between;
-    align-items: center; }
-    body #header #titleNamesContainer #title {
-      display: inline-block;
-      color: #737373;
-      font-size: 3em; }
-    body #header #titleNamesContainer #names {
-      display: inline-block;
-      font-size: 1.25em;
-      color: #737373;
-      opacity: .75; }
-      body #header #titleNamesContainer #names #rachelName {
-        margin-right: 1.5em; }
-  body #header #links {
-    padding: 5em 0;
-    height: 18px; }
-    body #header #links .rachelLinks, body #header #links .tonyLinks {
+    flex-direction: column;
+    justify-content: space-between; }
+    body #top #titleNamesContainer {
+      padding: 1em;
+      display: flex;
+      justify-content: space-between;
+      align-items: center; }
+      body #top #titleNamesContainer #title {
+        display: inline-block;
+        color: #737373;
+        font-size: 3em; }
+      body #top #titleNamesContainer #names {
+        display: inline-block;
+        font-size: 1.5em;
+        color: #737373;
+        opacity: .75; }
+        body #top #titleNamesContainer #names #rachelName {
+          margin-right: 1.5em; }
+    body #top #links .rachelLinks, body #top #links .tonyLinks {
+      width: 100%;
       display: flex;
       justify-content: space-around; }
-      body #header #links .rachelLinks a, body #header #links .tonyLinks a {
+      body #top #links .rachelLinks a, body #top #links .tonyLinks a {
         text-decoration: none;
         color: #F54623; }
-      body #header #links .rachelLinks a:hover, body #header #links .tonyLinks a:hover {
+      body #top #links .rachelLinks a:hover, body #top #links .tonyLinks a:hover {
         opacity: .75; }
-  body #svg img {
-    width: 100%; }
-  body #skillsContainer {
-    margin-top: -5px;
+    body #top #svg img {
+      margin-bottom: -5px;
+      width: 100%; }
+  body #bottom {
     background-color: #253F5D;
     width: 100%; }
-    body #skillsContainer #skills {
-      height: 70vh;
-      padding: 0 4em;
+    body #bottom #skills {
       display: flex;
       flex-direction: column;
       justify-content: space-around; }
-      body #skillsContainer #skills .between {
+      body #bottom #skills .between {
         display: flex;
         justify-content: space-between; }
-      body #skillsContainer #skills .around {
+      body #bottom #skills .around {
         display: flex;
         justify-content: space-around; }
-      body #skillsContainer #skills .center {
+      body #bottom #skills .center {
         display: flex;
         justify-content: center; }
 
