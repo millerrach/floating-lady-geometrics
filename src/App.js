@@ -74,18 +74,18 @@ class App extends Component {
                     <div id="links">
                         {this.state.rachelActive === true ?
                             <div className="rachelLinks">
-                                <a target="_blank" href="https://github.com/millerrach">Github</a>
-                                <a target="_blank" href="https://codepen.io/rachelmiller_io/">Codepen</a>
-                                <a target="_blank" href="https://www.instagram.com/vagarmundo">Instagram</a>
-                                <a target="_blank" href="mailto:rachel@geometrics.io">Email</a>
+                                <a target="_blank" rel="noopener noreferrer" href="https://github.com/millerrach">Github</a>
+                                <a target="_blank" rel="noopener noreferrer" href="https://codepen.io/rachelmiller_io/">Codepen</a>
+                                <a target="_blank" rel="noopener noreferrer" href="https://www.instagram.com/vagarmundo">Instagram</a>
+                                <a target="_blank" rel="noopener noreferrer" href="mailto:rachel@geometrics.io">Email</a>
                             </div>
                             : null}
                         {this.state.tonyActive === true ?
                             <div className="tonyLinks">
-                                <a className="tonyLinks" target="_blank" href="https://github.com/antschmidt">Github</a>
-                                <a className="tonyLinks" target="_blank" href="https://twitter.com/tonyschmidt">Twitter</a>
-                                <a className="tonyLinks" target="_blank" href="https://www.instagram.com/antschmidt">Instagram</a>
-                                <a className="tonyLinks" target="_blank" href="mailto:tony@geometrics.io">Email</a>
+                                <a className="tonyLinks" target="_blank" rel="noopener noreferrer" href="https://github.com/antschmidt">Github</a>
+                                <a className="tonyLinks" target="_blank" rel="noopener noreferrer" href="https://twitter.com/tonyschmidt">Twitter</a>
+                                <a className="tonyLinks" target="_blank" rel="noopener noreferrer" href="https://www.instagram.com/antschmidt">Instagram</a>
+                                <a className="tonyLinks" target="_blank" rel="noopener noreferrer" href="mailto:tony@geometrics.io">Email</a>
                             </div>
                             : null}
                     </div>

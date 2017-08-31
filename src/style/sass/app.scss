@@ -3,6 +3,16 @@ $red: #F54623;
 $lightGray: #D8D8D8;
 $darkGray: #737373;
 
+//Montserrat Font
+@font-face {
+  font-family: 'montserratregular';
+  src: url('../../font/Montserrat/montserrat-regular-webfont.woff2') format('woff2'),
+  url('../../font/Montserrat/montserrat-regular-webfont.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+
+}
+
 //Toggle Options
 .red {
   color: $red;
@@ -57,7 +67,7 @@ body {
     #svg {
       overflow: hidden;
       img {
-        margin-bottom: -5px;
+        margin-bottom: -10px;
         margin-left: -1%;
         width: 102%;
       }
