@@ -67,7 +67,6 @@ body {
     #svg {
       overflow: hidden;
       img {
-        margin-bottom: -10px;
         margin-left: -1%;
         width: 102%;
       }
@@ -76,6 +75,8 @@ body {
   #bottom {
     background-color: $blue;
     width: 100%;
+    margin-top: -5px;
+    padding-bottom: 5px;
     #skills {
       display: flex;
       flex-direction: column;
