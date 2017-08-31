@@ -6,4 +6,5 @@ npm-debug.log
 *.scssc
 *.map
 yarn.lock
+build
 
