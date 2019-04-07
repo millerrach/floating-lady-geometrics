@@ -23,13 +23,13 @@ class App extends Component {
         window.removeEventListener("resize", this.updateDimensions);
     }
     updateDimensions() {
-        this.setState({width: window.innerWidth});
+        this.setState({ width: window.innerWidth });
     }
     reset() {
-        if(this.state.rachelActive === true) {
+        if (this.state.rachelActive === true) {
             this.toggleRachel();
         }
-        if(this.state.tonyActive === true) {
+        if (this.state.tonyActive === true) {
             this.toggleTony();
         }
     }
@@ -66,35 +66,17 @@ class App extends Component {
     render() {
         return (
             <div className="App">
-                <div id="top" style={this.state.width < 700 ? {height: '50vh'} : {height: '60vh'}}>
+                <div id="top" style={this.state.width < 700 ? { height: '50vh' } : { height: '60vh' }}>
                     <div id="titleNamesContainer">
                         <div id="title" onClick={this.reset}>{this.state.width < 700 ? 'G' : 'Geometrics'}</div>
                         <div id="names"><span id="rachelName" className="rachel" onClick={this.rachel}>Rachel</span><span id="tonyName" className="tony" onClick={this.tony}>Tony</span></div>
-                    </div>
-                    <div id="links">
-                        {this.state.rachelActive === true ?
-                            <div className="rachelLinks">
-                                <a target="_blank" rel="noopener noreferrer" href="https://github.com/millerrach">Github</a>
-                                <a target="_blank" rel="noopener noreferrer" href="https://codepen.io/rachelmiller_io/">Codepen</a>
-                                <a target="_blank" rel="noopener noreferrer" href="https://www.instagram.com/vagarmundo">Instagram</a>
-                                <a target="_blank" rel="noopener noreferrer" href="mailto:rachel@geometrics.io">Email</a>
-                            </div>
-                            : null}
-                        {this.state.tonyActive === true ?
-                            <div className="tonyLinks">
-                                <a className="tonyLinks" target="_blank" rel="noopener noreferrer" href="https://github.com/antschmidt">Github</a>
-                                <a className="tonyLinks" target="_blank" rel="noopener noreferrer" href="https://twitter.com/tonyschmidt">Twitter</a>
-                                <a className="tonyLinks" target="_blank" rel="noopener noreferrer" href="https://www.instagram.com/antschmidt">Instagram</a>
-                                <a className="tonyLinks" target="_blank" rel="noopener noreferrer" href="mailto:tony@geometrics.io">Email</a>
-                            </div>
-                            : null}
                     </div>
                     <div id="svg">
                         <img src={require(`./images/PeacefulFloat.svg`)} alt="floatingLady" />
                     </div>
                 </div>
                 <div id="bottom">
-                    <div id="skills" style={this.state.width < 700 ? {height: '50vh', padding: '0 1em'} : {height: '40vh', padding: '0 4em'}}>
+                    <div id="skills" style={this.state.width < 700 ? { height: '50vh', padding: '0 1em' } : { height: '40vh', padding: '0 4em' }}>
                         <div className="skillsLineOne between">
                             <span className="rachel">SVGs</span>
                             <span className="tony">Go</span>

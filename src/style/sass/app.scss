@@ -50,20 +50,6 @@ body {
         }
       }
     }
-    #links {
-      .rachelLinks, .tonyLinks {
-        width: 100%;
-        display: flex;
-        justify-content: space-around;
-        a {
-          text-decoration: none;
-          color: $red;
-        }
-        a:hover {
-          opacity: .75;
-        }
-      }
-    }
     #svg {
       overflow: hidden;
       img {

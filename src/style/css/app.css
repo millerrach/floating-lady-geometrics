@@ -32,15 +32,6 @@ body {
         opacity: .75; }
         body #top #titleNamesContainer #names #rachelName {
           margin-right: 1.5em; }
-    body #top #links .rachelLinks, body #top #links .tonyLinks {
-      width: 100%;
-      display: flex;
-      justify-content: space-around; }
-      body #top #links .rachelLinks a, body #top #links .tonyLinks a {
-        text-decoration: none;
-        color: #F54623; }
-      body #top #links .rachelLinks a:hover, body #top #links .tonyLinks a:hover {
-        opacity: .75; }
     body #top #svg {
       overflow: hidden; }
       body #top #svg img {
